@@ -9,8 +9,11 @@ import { Header } from '../components/Header'
 import { FichaBasicaPage } from './FichaBasicaPage'
 import { AntecedentesPage } from './AntecedentesPage'
 import { MyCodeQrPage } from './MyCodeQrPage'
+import { useUsersValues } from '../context/UserContext'
 
 export const MainPage = ({ children, location }) => {
+  const { users, currentUser } = useUsersValues()
+  console.log(users[0].nombre)
   const StyledContainer = styled.div`
     max-width: 530px;
     margin: auto;
@@ -19,7 +22,7 @@ export const MainPage = ({ children, location }) => {
     <>
       <Header />
       <StyledContainer>
-        <WelcomeText username="John Doe" />
+        <WelcomeText username={users[currentUser].nombre} />
         <MenuButtons pathname={location.pathname} />
         <Route exact path="/" component={FichaBasicaPage} />
         <Route exact path="/antecedentes" component={AntecedentesPage} />
