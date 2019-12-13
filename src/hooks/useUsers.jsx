@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
 export const useUsers = () => {
-  const [currentUser, setCurrentUser] = useState(0)
+  const [currentUser, setCurrentUser] = useState(1)
   const [selectedUser, setSelectedUser] = useState(0)
   const [users, setUsers] = useState([
     {
@@ -42,20 +42,20 @@ export const useUsers = () => {
           salud: 'Saludable. No es diabético. No es hipertenso',
           alergias: 'No presenta',
           medicamentos: 'NO',
-          cirugías: 'NO',
-          consulta: '',
+          cirugias: 'NO',
+          consulta: 'Pérdida de visións',
           examen: 'Dos meses',
           sintomas:
             'Dolor de cabeza, disminución de visión en ojo derecho, distorsión de imágenes.'
         },
         {
-          id: 0,
+          id: 1,
           fecha: '12 de noviembre del 2019',
           salud: 'Saludable. No es diabético. No es hipertenso',
           alergias: 'No presenta',
           medicamentos: 'NO',
-          cirugías: 'NO',
-          consulta: '',
+          cirugias: 'NO',
+          consulta: 'Pérdida de visións',
           examen: 'Dos años',
           sintomas:
             'Dolor de cabeza, disminución de visión en ojo derecho, distorsión de imágenes.'
@@ -105,10 +105,10 @@ export const useUsers = () => {
       }
     },
     {
-      id: 2,
+      id: 1,
       code: '1234jbkjsa',
-      email: 'paco@gmail.com',
-      nombre: 'Paco',
+      email: 'doc@gmail.com',
+      nombre: 'Doctor',
       role: '1',
       password: 'secret',
       cedula: '',

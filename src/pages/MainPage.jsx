@@ -1,5 +1,5 @@
 import React from 'react'
-import { Route } from 'react-router-dom'
+import { Route, Redirect } from 'react-router-dom'
 import styled from 'styled-components'
 
 import { GlobalStyle } from '../styles/GlobalStyle'
@@ -9,11 +9,13 @@ import { Header } from '../components/Header'
 import { FichaBasicaPage } from './FichaBasicaPage'
 import { AntecedentesPage } from './AntecedentesPage'
 import { MyCodeQrPage } from './MyCodeQrPage'
+import { UsersPage } from './UsersPage'
+import { ExploracionPage } from './ExploracionPage'
 import { useUsersValues } from '../context/UserContext'
 
-export const MainPage = ({ children, location }) => {
+export const MainPage = ({ location }) => {
   const { users, currentUser } = useUsersValues()
-  console.log(users[0].nombre)
+
   const StyledContainer = styled.div`
     max-width: 530px;
     margin: auto;
@@ -24,9 +26,18 @@ export const MainPage = ({ children, location }) => {
       <StyledContainer>
         <WelcomeText username={users[currentUser].nombre} />
         <MenuButtons pathname={location.pathname} />
-        <Route exact path="/" component={FichaBasicaPage} />
-        <Route exact path="/antecedentes" component={AntecedentesPage} />
-        <Route exact path="/qr" component={MyCodeQrPage} />
+        {users[currentUser].id === 0 ? (
+          <>
+            <Route exact path="/" component={FichaBasicaPage} />
+            <Route exact path="/antecedentes" component={AntecedentesPage} />
+            {/* <Route exact path="/qr" component={MyCodeQrPage} /> */}
+          </>
+        ) : (
+          <>
+            <Route exact path="/" component={UsersPage} />
+            <Route exact path="/exploracion" component={ExploracionPage} />
+          </>
+        )}
         <GlobalStyle />
       </StyledContainer>
     </>

@@ -1,25 +1,67 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { Redirect } from 'react-router-dom'
 
 import Container from '@material-ui/core/es/Container'
 import Typography from '@material-ui/core/es/Typography'
 import Box from '@material-ui/core/es/Box'
 import TextField from '@material-ui/core/es/TextField'
-import FormControlLabel from '@material-ui/core/es/FormControlLabel'
-import Checkbox from '@material-ui/core/es/Checkbox'
 import Button from '@material-ui/core/es/Button'
 import Paper from '@material-ui/core/es/Paper'
 
+import { makeStyles } from '@material-ui/styles'
+
 import { Copyright } from '../components/Copyright'
 import { ImageContainer } from '../components/ImageContainer'
-import { useLoginStyles } from '../styles/useLoginStyles'
 
 import logo from '../assets/logo.svg'
+import { useUsersValues } from '../../../frontend/src/context/UserContext'
 
-export const LoginPage = () => {
-  const classes = useLoginStyles()
+const useStyles = makeStyles(theme => ({
+  logo: {
+    // background: theme.palette.primary.main,
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    marginTop: theme.spacing(10),
+    marginBottom: theme.spacing(2),
+    padding: '30px 0'
+  },
+  body: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    padding: '16px'
+  },
+  form: {
+    width: '100%',
+    marginTop: theme.spacing(1)
+  },
+  submit: {
+    margin: theme.spacing(3, 0, 2)
+  }
+}))
 
-  const loginCallback = e => {
-    e.preventDefault()
+export const LoginPage = ({ history }) => {
+  const [email, setEmail] = useState('johndoe@gmail.com')
+  const [password, setPassword] = useState('secret')
+  const [error, setError] = useState('')
+
+  const { setCurrentUser } = useUsersValues()
+
+  const classes = useStyles()
+
+  const submitLogin = () => {
+    if (email === 'johndoe@gmail.com' && password === 'secret') {
+      localStorage.setItem('user', 'feather')
+      setCurrentUser(0)
+      history.push('/')
+    } else if (email === 'doc@gmail.com' && password === 'secret') {
+      localStorage.setItem('user', 'feather')
+      setCurrentUser(1)
+      history.push('/')
+    } else {
+      setError('Los datos no son los correctos.')
+    }
   }
 
   return (
@@ -42,6 +84,8 @@ export const LoginPage = () => {
             name="email"
             autoComplete="email"
             autoFocus
+            onChange={e => setEmail(e.target.value)}
+            value={email}
           />
           <TextField
             variant="outlined"
@@ -53,17 +97,15 @@ export const LoginPage = () => {
             type="password"
             id="password"
             autoComplete="current-password"
-          />
-          <FormControlLabel
-            control={<Checkbox value="remember" color="primary" />}
-            label="Remember me"
+            onChange={e => setPassword(e.target.value)}
+            value={password}
           />
           <Button
             fullWidth
             variant="contained"
             color="primary"
             className={classes.submit}
-            onClick={loginCallback}
+            onClick={submitLogin}
           >
             Sign In
           </Button>

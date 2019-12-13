@@ -13,6 +13,7 @@ export const BigButton = ({ ico, darkIco, label, active = false }) => {
     align-items: center;
     color: ${active ? '#fff' : '#545454'};
     cursor: pointer;
+    margin-left: 20px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     /* box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 3px -2px,
       rgba(0, 0, 0, 0.14) 0px 3px 4px 0px, rgba(0, 0, 0, 0.12) 0px 1px 8px 0px; */

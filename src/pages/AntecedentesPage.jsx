@@ -33,42 +33,6 @@ export const AntecedentesPage = () => {
           />
         </StyledCard>
       ))}
-      {/* <StyledCard style={{ marginTop: '20px' }}>
-        <StyledTwoPanels>
-          <div>
-            <ContentData label="Fecha" content="12 de febrero del 2019" />
-          </div>
-          <div>
-            <ContentData
-              label="Motivo de Consulta"
-              content="Pérdida de visión en el ojo derecho"
-            />
-          </div>
-        </StyledTwoPanels>
-        <ContentData
-          margintTop
-          label="Síntomas Astenópicos"
-          content="Dolor de cabeza, disminución de visión en ojo derecho, distorsión de imágenes"
-        />
-      </StyledCard>
-      <StyledCard style={{ margin: '20px 0 80px 0' }}>
-        <StyledTwoPanels>
-          <div>
-            <ContentData label="Fecha" content="21 de noviembre del 2019" />
-          </div>
-          <div>
-            <ContentData
-              label="Motivo de Consulta"
-              content="Pérdida de visión"
-            />
-          </div>
-        </StyledTwoPanels>
-        <ContentData
-          margintTop
-          label="Síntomas Astenópicos"
-          content="Dolor de cabeza, disminución de visión en ojo derecho, distorsión de imágenes"
-        />
-      </StyledCard> */}
     </>
   )
 }
