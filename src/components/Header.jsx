@@ -34,7 +34,7 @@ export const Header = () => {
         }}
         onClick={() => setCurrentUser(null)}
       >
-        <ExitToAppIcon color="#333" />
+        <ExitToAppIcon />
       </div>
     </StyledHeader>
   )

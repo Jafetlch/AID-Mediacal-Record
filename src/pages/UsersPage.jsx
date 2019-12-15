@@ -42,7 +42,7 @@ export const UsersPage = () => {
               marginTop: '5px',
               cursor: 'pointer',
               position: 'absolute',
-              right: '260px'
+              right: '0'
             }}
             onClick={() => {
               setSelected(prev => !prev)

@@ -18,6 +18,7 @@ export const MainPage = ({ location }) => {
   const StyledContainer = styled.div`
     max-width: 530px;
     margin: auto;
+    position: relative;
   `
   return (
     <>
