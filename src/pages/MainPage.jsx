@@ -1,5 +1,5 @@
 import React from 'react'
-import { Route, Redirect } from 'react-router-dom'
+import { Route } from 'react-router-dom'
 import styled from 'styled-components'
 
 import { GlobalStyle } from '../styles/GlobalStyle'
@@ -8,7 +8,6 @@ import { WelcomeText } from '../components/WelcomeText'
 import { Header } from '../components/Header'
 import { FichaBasicaPage } from './FichaBasicaPage'
 import { AntecedentesPage } from './AntecedentesPage'
-import { MyCodeQrPage } from './MyCodeQrPage'
 import { UsersPage } from './UsersPage'
 import { ExploracionPage } from './ExploracionPage'
 import { useUsersValues } from '../context/UserContext'
@@ -35,7 +34,7 @@ export const MainPage = ({ location }) => {
         ) : (
           <>
             <Route exact path="/" component={UsersPage} />
-            <Route exact path="/exploracion" component={ExploracionPage} />
+            <Route exact path="/expediente" component={ExploracionPage} />
           </>
         )}
         <GlobalStyle />

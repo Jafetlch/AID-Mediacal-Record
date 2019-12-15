@@ -16,7 +16,8 @@ export const ImageContainer = ({
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
         height: `${height}px`,
-        width: `${width}px`
+        width: `${width}px`,
+        margin: 'auto'
       }}
     >
       {children}

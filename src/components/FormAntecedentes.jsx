@@ -4,10 +4,11 @@ import { StyledH2 } from '../styles/StyledH2'
 import { StyledCard } from '../styles/StyledCard'
 import { useUsersValues } from '../context/UserContext'
 
-export const FormAntecedentes = () => {
+export const FormAntecedentes = ({ close, submit }) => {
   const { users } = useUsersValues()
   return (
-    <StyledCard>
+    <StyledCard style={{ marginTop: '0px', position: 'relative' }}>
+      {close}
       <StyledH2>{users[0].nombre}</StyledH2>
       <p>Antecedentes</p>
       <TextField
@@ -74,6 +75,7 @@ export const FormAntecedentes = () => {
         value={''}
         required
       />
+      {submit}
     </StyledCard>
   )
 }

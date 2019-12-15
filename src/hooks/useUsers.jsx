@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
 export const useUsers = () => {
-  const [currentUser, setCurrentUser] = useState(1)
+  const [currentUser, setCurrentUser] = useState(null)
   const [selectedUser, setSelectedUser] = useState(0)
   const [users, setUsers] = useState([
     {

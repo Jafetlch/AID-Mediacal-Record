@@ -6,7 +6,10 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
   body {
-    font-family: 'Raleway';
     background: #FCFCFC;
+    font-family: 'Raleway';
+    &::-webkit-scrollbar { 
+      display: none; 
+    }
   }
 `

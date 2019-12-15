@@ -54,18 +54,18 @@ export const MenuButtons = ({ pathname }) => {
         <>
           <CustomLink to="/">
             <BigButton
-              label="Ficha Básica"
+              label="Usuarios"
               ico={users_ico}
               darkIco={users_dark}
               active={pathname === '/'}
             />
           </CustomLink>
-          <CustomLink to="/exploracion" style={{ textDecoration: 'none' }}>
+          <CustomLink to="/expediente" style={{ textDecoration: 'none' }}>
             <BigButton
-              label="Antecedentes"
+              label="Expediente"
               ico={folder_plus}
               darkIco={folder_plus_dark}
-              active={pathname === '/exploracion'}
+              active={pathname === '/expediente'}
             />
           </CustomLink>
         </>

@@ -3,18 +3,18 @@ import TextField from '@material-ui/core/es/TextField'
 import { StyledCard } from '../styles/StyledCard'
 import { StyledH2 } from '../styles/StyledH2'
 
-export const FormExploracion = ({ close }) => {
+export const GloucomaPage = ({ close }) => {
   return (
     <>
       <StyledCard style={{ marginTop: '0px', position: 'relative' }}>
         {close}
-        <StyledH2>Exploración Oftalmológica</StyledH2>
+        <StyledH2>Glaucoma Primario</StyledH2>
         <p>Ojo Derecho</p>
         <TextField
           variant="outlined"
           margin="normal"
           fullWidth
-          label="Exploración externa"
+          label="Agudeza Visual"
           autoFocus
           onChange={e => {}}
           value={''}
@@ -24,7 +24,7 @@ export const FormExploracion = ({ close }) => {
           variant="outlined"
           margin="normal"
           fullWidth
-          label="Cornea y cámara anterior "
+          label="Agudeza Visual corregida"
           onChange={e => {}}
           value={''}
           required
@@ -33,7 +33,7 @@ export const FormExploracion = ({ close }) => {
           variant="outlined"
           margin="normal"
           fullWidth
-          label="Conjuntiva "
+          label="Segmento anterior"
           onChange={e => {}}
           value={''}
           required
@@ -42,7 +42,7 @@ export const FormExploracion = ({ close }) => {
           variant="outlined"
           margin="normal"
           fullWidth
-          label="Iris y pupila"
+          label="Medios"
           onChange={e => {}}
           value={''}
           required
@@ -51,16 +51,7 @@ export const FormExploracion = ({ close }) => {
           variant="outlined"
           margin="normal"
           fullWidth
-          label="Cristalino"
-          onChange={e => {}}
-          value={''}
-          required
-        />
-        <TextField
-          variant="outlined"
-          margin="normal"
-          fullWidth
-          label="Presión intraocular"
+          label="Presión intraocular (PIO)"
           onChange={e => {}}
           value={''}
           required
@@ -80,7 +71,7 @@ export const FormExploracion = ({ close }) => {
           variant="outlined"
           margin="normal"
           fullWidth
-          label="Exploración externa"
+          label="Agudeza Visual"
           onChange={e => {}}
           value={''}
           required
@@ -89,7 +80,7 @@ export const FormExploracion = ({ close }) => {
           variant="outlined"
           margin="normal"
           fullWidth
-          label="Cornea y cámara anterior "
+          label="Agudeza Visual corregida"
           onChange={e => {}}
           value={''}
           required
@@ -98,7 +89,7 @@ export const FormExploracion = ({ close }) => {
           variant="outlined"
           margin="normal"
           fullWidth
-          label="Conjuntiva "
+          label="Segmento anterior"
           onChange={e => {}}
           value={''}
           required
@@ -107,7 +98,7 @@ export const FormExploracion = ({ close }) => {
           variant="outlined"
           margin="normal"
           fullWidth
-          label="Iris y pupila"
+          label="Medios"
           onChange={e => {}}
           value={''}
           required
@@ -116,16 +107,7 @@ export const FormExploracion = ({ close }) => {
           variant="outlined"
           margin="normal"
           fullWidth
-          label="Cristalino"
-          onChange={e => {}}
-          value={''}
-          required
-        />
-        <TextField
-          variant="outlined"
-          margin="normal"
-          fullWidth
-          label="Presión intraocular"
+          label="Presión intraocular (PIO)"
           onChange={e => {}}
           value={''}
           required

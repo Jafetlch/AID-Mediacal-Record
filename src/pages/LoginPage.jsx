@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { Redirect } from 'react-router-dom'
 
 import Container from '@material-ui/core/es/Container'
 import Typography from '@material-ui/core/es/Typography'
@@ -51,12 +50,14 @@ export const LoginPage = ({ history }) => {
   const classes = useStyles()
 
   const submitLogin = () => {
+    console.log('1')
     if (email === 'johndoe@gmail.com' && password === 'secret') {
       localStorage.setItem('user', 'feather')
       setCurrentUser(0)
       history.push('/')
     } else if (email === 'doc@gmail.com' && password === 'secret') {
       localStorage.setItem('user', 'feather')
+      console.log('3')
       setCurrentUser(1)
       history.push('/')
     } else {
@@ -109,6 +110,13 @@ export const LoginPage = ({ history }) => {
           >
             Sign In
           </Button>
+          {error && (
+            <div style={{ textAlign: 'center' }}>
+              <span style={{ fontSize: '14px', color: '#B70C12' }}>
+                {error}
+              </span>
+            </div>
+          )}
         </form>
       </Paper>
 

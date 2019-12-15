@@ -1,18 +1,20 @@
 import React from 'react'
-
-import MedicalRecordQR from '../assets/MedicalRecordQR.svg'
+import styled from 'styled-components'
 
 import { StyledCard } from '../styles/StyledCard'
 import { ContentData } from '../components/ContentData'
-import { ImageContainer } from '../components/ImageContainer'
 import { StyledH2 } from '../styles/StyledH2'
 import { StyledTwoPanels } from '../styles/StyledTwoPanels'
 import { useUsersValues } from '../context/UserContext'
 
-export const FichaBasicaPage = () => {
-  const { currentUser, users } = useUsersValues()
+export const DisplayPage = () => {
+  const StyledContainer = styled.div`
+    max-width: 530px;
+    margin: auto;
+  `
+  const { users } = useUsersValues()
   return (
-    <>
+    <StyledContainer>
       <StyledCard style={{ marginTop: '40px' }}>
         <StyledTwoPanels>
           <div>
@@ -35,7 +37,7 @@ export const FichaBasicaPage = () => {
       <StyledH2 style={{ margin: '40px 0 0 20px' }}>
         Mis contactos de <span style={{ color: '#B70C12' }}>Emergencia</span>
       </StyledH2>
-      {users[currentUser].contactos.map(contacto => (
+      {users[0].contactos.map(contacto => (
         <StyledCard style={{ marginTop: '20px' }} key={contacto.id}>
           <StyledTwoPanels>
             <div>
@@ -47,13 +49,7 @@ export const FichaBasicaPage = () => {
           </StyledTwoPanels>
         </StyledCard>
       ))}
-      <StyledH2 style={{ margin: '40px 0 0 20px' }}>
-        Mi <span style={{ color: '#B70C12' }}>QR</span>
-      </StyledH2>
-      <StyledCard style={{ marginTop: '20px' }}>
-        <ImageContainer img={MedicalRecordQR} width="400" height="400" />
-      </StyledCard>
       <div style={{ height: '40px' }} />
-    </>
+    </StyledContainer>
   )
 }

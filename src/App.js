@@ -8,16 +8,23 @@ import {
 import { ThemeProvider } from './context/ThemeContext'
 import { MainPage } from './pages/MainPage'
 import { LoginPage } from './pages/LoginPage'
-import { PrivateRoute } from './components/PrivateRoute'
-import { PublicRoute } from './components/PublicRoute'
+import { useUsersValues } from './context/UserContext'
+import { DisplayPage } from './pages/DisplayPage'
 
 export const App = () => {
+  const { currentUser } = useUsersValues()
+
   return (
     <ThemeProvider>
       <Router>
         <Switch>
+          <Route exact path="/3117fth" component={DisplayPage} />
           <Route exact path="/login" component={LoginPage} />
-          <Route component={MainPage} />
+          {currentUser !== null ? (
+            <Route component={MainPage} />
+          ) : (
+            <Redirect to="/login" />
+          )}
         </Switch>
       </Router>
     </ThemeProvider>
