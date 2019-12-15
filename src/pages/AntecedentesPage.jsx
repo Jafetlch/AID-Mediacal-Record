@@ -10,7 +10,7 @@ export const AntecedentesPage = () => {
   const { users, currentUser } = useUsersValues()
   return (
     <>
-      <StyledH2 style={{ marginTop: '50px' }}>
+      <StyledH2 style={{ margin: '50px 0 0 20px' }}>
         Mi historial de <span style={{ color: '#B70C12' }}>Antecedentes</span>
       </StyledH2>
       {users[currentUser].antecedentes.map(antecedente => (

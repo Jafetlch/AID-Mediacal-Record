@@ -11,7 +11,7 @@ export const ExploracionDocDisplay = () => {
 
   return (
     <>
-      <StyledH2>
+      <StyledH2 style={{ margin: '20px 0 0 20px' }}>
         Exploración de{' '}
         <span style={{ color: '#B70C12' }}>{users[0].nombre}</span>
       </StyledH2>

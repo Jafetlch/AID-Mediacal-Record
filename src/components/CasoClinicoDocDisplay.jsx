@@ -11,7 +11,7 @@ export const CasoClinicoDocDisplay = () => {
 
   return (
     <>
-      <StyledH2 style={{ margin: '40px 0 20px 0' }}>
+      <StyledH2 style={{ margin: '20px 0 20px 20px' }}>
         Caso clínico glaucoma primario
       </StyledH2>
       <StyledH2 style={{ marginTop: '20px' }}>

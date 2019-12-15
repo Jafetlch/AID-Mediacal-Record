@@ -55,7 +55,7 @@ export const UsersPage = () => {
           <AntecedentesDocDisplay />
           {/*  */}
           <StyledCard style={{ marginTop: '20px' }}>
-            <ImageContainer img={MedicalRecordQR} width="400" height="400" />
+            <ImageContainer img={MedicalRecordQR} width="350" height="350" />
           </StyledCard>
         </div>
       )}

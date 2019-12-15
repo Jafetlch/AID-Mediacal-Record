@@ -12,7 +12,7 @@ export const AntecedentesDocDisplay = () => {
       <StyledH2 style={{ margin: '40px 0 20px 0' }}>Antecedentes</StyledH2>
 
       {users[0].antecedentes.map(antecedente => (
-        <StyledCard style={{ marginTop: '20px' }} key={antecedente.id}>
+        <StyledCard style={{ margin: '20px 0 0 20px' }} key={antecedente.id}>
           <ContentData label="ID" content={antecedente.id + 1} />
           <ContentData margintTop label="Fecha" content={antecedente.fecha} />
           <ContentData

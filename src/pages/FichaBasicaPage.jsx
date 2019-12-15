@@ -51,7 +51,7 @@ export const FichaBasicaPage = () => {
         Mi <span style={{ color: '#B70C12' }}>QR</span>
       </StyledH2>
       <StyledCard style={{ marginTop: '20px' }}>
-        <ImageContainer img={MedicalRecordQR} width="400" height="400" />
+        <ImageContainer img={MedicalRecordQR} width="350" height="350" />
       </StyledCard>
       <div style={{ height: '40px' }} />
     </>
