@@ -86,7 +86,7 @@ export const useUsers = () => {
           'Paciente presenta glaucoma en estado inicial en el ojo derecho'
       },
       glaucoma: {
-        derecha: {
+        derecho: {
           agudeza_visual: '20/70',
           agudeza_corregida: '20/60',
           segmento_anterior: 'Estrecho',

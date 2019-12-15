@@ -1,4 +1,31 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# AID Medical Record
+
+## Description
+Just an app created in a short time ... for a friend's project.
+
+[Demo](https://medical.f34th3r.io/login)
+
+## Screenshots
+
+![app](./doc/login.png)
+
+User Area
+![app](./doc/userDashboard.png)
+
+Admin Area
+![app](./doc/adminDashboard.png)
+
+## Users
+
+Regular user = `johndoe@gmail.com`
+
+Admin user = `doc@gmail.com`
+
+Password for all users = `secret`
+
+### Route
+User display info = `localhost/3117fth`
+
 
 ## Available Scripts
 
@@ -37,32 +64,20 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+## Built With
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+* [React](https://reactjs.org/) - The backend framework used
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Versioning
 
-### Code Splitting
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+## Authors
 
-### Analyzing the Bundle Size
+* **Jafet** - [F34th3R](https://github.com/F34th3R)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
 
-### Making a Progressive Web App
+## License
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
 
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify

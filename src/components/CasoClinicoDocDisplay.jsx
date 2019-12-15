@@ -7,7 +7,7 @@ import { StyledTwoPanels } from '../styles/StyledTwoPanels'
 
 export const CasoClinicoDocDisplay = () => {
   const { users } = useUsersValues()
-  const { derecho, izquierdo } = users[0].exploracion
+  const { derecho, izquierdo } = users[0].glaucoma
 
   return (
     <>
@@ -22,36 +22,24 @@ export const CasoClinicoDocDisplay = () => {
         <StyledTwoPanels>
           <div>
             <ContentData
-              label="Anexos (exploración externa)"
-              content={derecho.anexo}
+              label="Agudeza Visual"
+              content={derecho.agudeza_visual}
             />
             <ContentData
               margintTop
-              label="Motilidad ocular"
-              content={derecho.motilidad_ocular}
+              label="Agudeza Visual corregida"
+              content={derecho.agudeza_corregida}
             />
             <ContentData
               margintTop
-              label="Cornea y cámara anterior"
-              content={derecho.cornea_camara}
+              label="Segmento anterior"
+              content={derecho.segmento_anterior}
             />
+            <ContentData margintTop label="Medios" content={derecho.medios} />
             <ContentData
               margintTop
-              label="Conjuntiva"
-              content={derecho.conjutiva}
-            />
-          </div>
-          <div>
-            <ContentData label="Iris y pupila" content={derecho.iris_popila} />
-            <ContentData
-              margintTop
-              label="Cristalino"
-              content={derecho.cristalino}
-            />
-            <ContentData
-              margintTop
-              label="Presión intraocular"
-              content={derecho.presion_intracular}
+              label="Presión intraocular (PIO)"
+              content={derecho.presion_intraocular}
             />
           </div>
         </StyledTwoPanels>
@@ -65,39 +53,24 @@ export const CasoClinicoDocDisplay = () => {
         <StyledTwoPanels>
           <div>
             <ContentData
-              label="Anexos (exploración externa)"
-              content={izquierdo.anexo}
+              label="Agudeza Visual"
+              content={izquierdo.agudeza_visual}
             />
             <ContentData
               margintTop
-              label="Motilidad ocular"
-              content={izquierdo.motilidad_ocular}
+              label="Agudeza Visual corregida"
+              content={izquierdo.agudeza_corregida}
             />
             <ContentData
               margintTop
-              label="Cornea y cámara anterior"
-              content={izquierdo.cornea_camara}
+              label="Segmento anterior"
+              content={izquierdo.segmento_anterior}
             />
+            <ContentData margintTop label="Medios" content={derecho.medios} />
             <ContentData
               margintTop
-              label="Conjuntiva"
-              content={izquierdo.conjutiva}
-            />
-          </div>
-          <div>
-            <ContentData
-              label="Iris y pupila"
-              content={izquierdo.iris_popila}
-            />
-            <ContentData
-              margintTop
-              label="Cristalino"
-              content={izquierdo.cristalino}
-            />
-            <ContentData
-              margintTop
-              label="Presión intraocular"
-              content={izquierdo.presion_intracular}
+              label="Presión intraocular (PIO)"
+              content={izquierdo.presion_intraocular}
             />
           </div>
         </StyledTwoPanels>
